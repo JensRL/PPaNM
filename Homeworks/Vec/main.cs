@@ -1,33 +1,19 @@
 using System; 
 using static System.Console;  
 using static System.Math; 
+using static vec;
 
 class main{
 		static void Main(){
-				int n=9;
-				double[] a=new double[n];
-				a[0]=7; 
-				WriteLine($"a[0]={a[0]}");
-				for(int i=0; i<n; i++){a[i]=i;}
-				for(int i=0; i<n; i++)WriteLine($"a[{i}]={a[i]}");
-
-				int m=n; 
-				m=0;
-				WriteLine($"m={m}, n=...{n}");
-
-				double[] b=a;
-				b[0]=999;
-				WriteLine($"b[0]={b[0]}, a[0]=...{a[0]}");
-
-				foreach(double ai in a)WriteLine($"ai={ai}");
-
+				WriteLine("Checking if generation of vectors and prints work:");
 				vec u=new vec(100,200,300);
 				u.print("u=");
 				vec v=new vec(1,2,3);
-				u.print("v=");
+				v.print("v=");
+				WriteLine("Checking if addition and multiplication operations work:");
 				(u+v).print($"u+v = ");
 				var w=3*u-v; //If the compiler can figure out the type, you can use var instead of vec
-				w.print("w=");
+				w.print("w=3*u-v=");
 
 
 				WriteLine("Checking dot product, cross product and norm:");
@@ -35,8 +21,17 @@ class main{
 				vec k=new vec(5,4,6);
 				j.print("j=");
 				k.print("k=");
-				dotted = dot(j,k);
-				WriteLine($"Dot Product of j and k={dotted}");
+				WriteLine($"Dot Product of j and k: {dot(j,k)}");
+				WriteLine($"Cross Product of j and k: {cross(j,k)}");
+				WriteLine($"Norm of j: {norm(j)}");
+
+				WriteLine($"Checking the approx method for vectors j and k: {approx(j,k)}");
+				vec c = new vec(1,1,1);
+				vec d = new vec(1,1,1);
+				c.print("New vector c=");
+				d.print("New vector d=");
+				WriteLine($"Checking the approx method for vectors c and d: {approx(c,d)}");
+
 		}
 
 

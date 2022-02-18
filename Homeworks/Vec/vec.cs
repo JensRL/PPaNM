@@ -35,8 +35,8 @@ public class vec{
 				}
 
 		//Dot Product
-		public static vec dot(vec u, vec v){
-				return new vec(u.x*v.x, u.y*v.y, u.z*v.z);
+		public static double dot(vec u, vec v){
+				return (u.x*v.x+ u.y*v.y+ u.z*v.z);
 		}
 		//Cross Product
 		public static vec cross(vec u, vec v){
@@ -48,7 +48,24 @@ public class vec{
 				return norm;
 		}
 
+		//Override to string
+		public override string ToString(){
+				return $"vec[({x}, {y}, {z})]";
+		}
 
+		//Approx Method
+		public static bool approx(vec a, vec b, double tau=1e-9, double epsilon=1e-9){
+               	if (Abs(a.x-b.x) < tau && Abs(a.y-b.y) < tau && Abs(a.z-b.z) < tau) {
+               		return true;
+               	}
+               	if (Abs(a.x-b.x)/(Abs(a.x)+Abs(b.x)) < epsilon && Abs(a.y-b.y)/(Abs(a.y)+Abs(b.y)) < epsilon && Abs(a.z-b.z)/(Abs(a.z)+Abs(b.z)) < epsilon ){
+               		return true;
+               	}
+               	else {
+               		return false;
+               	}
+        }
+               
 
 		
 }
