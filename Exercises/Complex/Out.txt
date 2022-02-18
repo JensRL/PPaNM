@@ -1,0 +1,7 @@
+Sqrt of -1: 6.12e-17+1i
+Sqrt of i: 0.707+0.707i
+exp(i) = 0.54+0.841i
+exp(i*pi) = -1+1.22e-16i
+i^i: 0.208+0i
+log(i): 0+1.57i
+sin(i*pi): 0+11.5i

@@ -1,0 +1,16 @@
+Checking if generation of vectors and prints work:
+u=100 200 300
+v=100 200 300
+Checking if addition and multiplication operations work:
+u+v = 101 202 303
+w=299 598 897
+Checking dot product, cross product and norm:
+j=1 5 10
+k=5 4 6
+Dot Product of j and k: 85
+Cross Product of j and k: vec[(-10, -44, -21)]
+Norm of j: 11.2249721603218
+Checking the approx method for vectors j and k: False
+New vector c=1 1 1
+New vector d=1 1 1
+Checking the approx method for vectors c and d: True
