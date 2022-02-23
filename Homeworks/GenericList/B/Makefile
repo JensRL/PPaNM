@@ -18,6 +18,7 @@ $(IN): Makefile
 	echo '  \t    \t ' 88.6 '  \t\t\t     '  33.745 7.78 >> $@
 	echo 30.39 99.811 '\t \t ' 6.723 >> $@
 	echo '\t' -1.33   96.3 '\t'    2.23 >> $@
+	echo '\t' -9.99 	99.99 '\t \t' 9999.99 >> $@
 
 main.exe: main.cs genlist.dll
 	mcs -target:exe -out:$@ $< -reference:genlist.dll 
@@ -27,4 +28,4 @@ genlist.dll: genlist.cs
 
 .PHONEY: clean
 clean: 
-		$(RM) [Oo]ut* *.exe
+		$(RM) [Oo]ut* *.exe *.dll

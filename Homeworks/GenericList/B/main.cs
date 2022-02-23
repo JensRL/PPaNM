@@ -21,10 +21,10 @@ public static class main{
 		        }
 		
 		// Checking remove function
-		WriteLine("Removing element i=3 and printing again:");
-		WriteLine($"Size is equal to {list.size}");
+		WriteLine("Removing element i=1 and printing again:");
+		WriteLine($"Size before removal: {list.size}");
 		list.remove(1);
-		WriteLine($"Size is equal to {list.size}");
+		WriteLine($"Size after removal: {list.size}");
 		for(int i=0;i<list.size;i++){
 			var numbers = list.data[i];
 			foreach(var number in numbers)Write($"{number:e} ");

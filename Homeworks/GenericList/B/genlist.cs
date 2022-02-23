@@ -18,11 +18,12 @@ public class genlist<T>{
 		}
 
 	public void remove(int i){
-		for(int j=i; j<size; j++) {
+		if(i>size-1) WriteLine($"Remove: i = {i}, size = {size}");
+		for(int j=i; j<size-1; j++) {
 			data[j] = data[j+1];
-			//size--;
-			WriteLine($"j is now {j}");
 		}
+		size--;
+
 	}
 	
 }

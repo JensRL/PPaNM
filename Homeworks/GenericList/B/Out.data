@@ -5,6 +5,7 @@ input: Irregular table:
   	    	  88.6   			      33.745 7.78
 30.39 99.811 	 	  6.723
 	 -1.33 96.3 	 2.23
+	 -9.99 99.99 	 	 9999.99
 
 output: Regular table:
 Size of array: 1
@@ -15,11 +16,17 @@ Size of array: 3
 Capacity of array: 4
 Size of array: 4
 Capacity of array: 4
+Size of array: 5
+Capacity of array: 8
 1.292400e+002 2.480000e-001 4.847000e+000 
 8.860000e+001 3.374500e+001 7.780000e+000 
 3.039000e+001 9.981100e+001 6.723000e+000 
 -1.330000e+000 9.630000e+001 2.230000e+000 
-Removing element i=3 and printing again:
-Size is equal to 4
-j is now 1
-j is now 2
+-9.990000e+000 9.999000e+001 9.999990e+003 
+Removing element i=1 and printing again:
+Size before removal: 5
+Size after removal: 4
+1.292400e+002 2.480000e-001 4.847000e+000 
+3.039000e+001 9.981100e+001 6.723000e+000 
+-1.330000e+000 9.630000e+001 2.230000e+000 
+-9.990000e+000 9.999000e+001 9.999990e+003 
