@@ -19,5 +19,17 @@ public static class main{
 			foreach(var number in numbers)Write($"{number:e} ");
 			WriteLine();
 		        }
+		
+		// Checking remove function
+		WriteLine("Removing element i=3 and printing again:");
+		WriteLine($"Size is equal to {list.size}");
+		list.remove(1);
+		WriteLine($"Size is equal to {list.size}");
+		for(int i=0;i<list.size;i++){
+			var numbers = list.data[i];
+			foreach(var number in numbers)Write($"{number:e} ");
+			WriteLine();
+		        }
+		
 	}
 }

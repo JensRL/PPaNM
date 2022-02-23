@@ -14,9 +14,10 @@ $(OUT): main.exe $(IN)
 
 $(IN): Makefile
 	> $@
-	echo -1.23 '   '  23.4 '\t   \t' 456.7 >> $@
-	echo '  \t    ' 0.07 '  \t\t\t     '  -7.4e8 '\t' 6.72 >> $@
-	echo 0.53 23.4 4.5 >> $@
+	echo 129.24 '   '  0.248 '\t   \t' 4.847 >> $@
+	echo '  \t    \t ' 88.6 '  \t\t\t     '  33.745 7.78 >> $@
+	echo 30.39 99.811 '\t \t ' 6.723 >> $@
+	echo '\t' -1.33   96.3 '\t'    2.23 >> $@
 
 main.exe: main.cs genlist.dll
 	mcs -target:exe -out:$@ $< -reference:genlist.dll 

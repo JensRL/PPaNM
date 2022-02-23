@@ -16,10 +16,14 @@ public class genlist<T>{
 		WriteLine($"Size of array: {size}");
 		WriteLine($"Capacity of array: {capacity}");
 		}
-	/*
+
 	public void remove(int i){
-		
+		for(int j=i; j<size; j++) {
+			data[j] = data[j+1];
+			//size--;
+			WriteLine($"j is now {j}");
+		}
 	}
-	*/
+	
 }
 
