@@ -1,0 +1,8 @@
+set terminal png 
+set output 'LnGamma.gnuplot.png' 
+set xlabel 'x' 
+set ylabel 'y' 
+ 	set title 'Log Gamma Function' 
+ 	set key right bottom 
+  	plot [0:75] [0:230]'OutputLnGamma.txt' index 0 using 1:2 with lines title 'Log(Gamma Function)', 	'LnGammaTab.txt' with points pointtype 2 title 'Tab Values' 
+

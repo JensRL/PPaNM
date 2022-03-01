@@ -18,7 +18,7 @@ public static class main{
 			var numbers = list.data[i];
 			foreach(var number in numbers)Write($"{number:e} ");
 			WriteLine();
-		        }
+		}
 		
 		// Checking remove function
 		WriteLine("Removing element i=1 and printing again:");
@@ -29,7 +29,7 @@ public static class main{
 			var numbers = list.data[i];
 			foreach(var number in numbers)Write($"{number:e} ");
 			WriteLine();
-		        }
+		}
 		
 	}
 }

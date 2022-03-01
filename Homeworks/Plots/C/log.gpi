@@ -1,0 +1,10 @@
+set terminal png 
+set output 'CompLnGamma.gnuplot.png' 
+set xlabel 'Re(z)' 
+set ylabel 'Im(z)' 
+ 	set title 'Complex Gamma Function in 3D' 
+ 	set key left top 
+ 	set hidden3d 
+ 	set xyplane at -1 
+ 	splot [-5:5] [-5:5] [0:30] 'CompOutputLnGamma.txt' index 0 using 2:1:3 title 'abs(Gamma(z))', 
+
