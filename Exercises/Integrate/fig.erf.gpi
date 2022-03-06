@@ -1,0 +1,9 @@
+set terminal png
+set out "fig.erf.png"
+set tics out
+set xlabel "x"
+set ylabel "y"
+set key left
+set grid
+set title "Error function, Integral representation"
+plot[-2.5:2.5] [] "erf.data.txt" with lines title "erf(x)"

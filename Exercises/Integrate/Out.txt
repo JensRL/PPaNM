@@ -1,0 +1,1 @@
+Integral of ln(x)/sqrt(x): Result = -3.99999970392108, ncalls = 224
