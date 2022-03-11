@@ -23,4 +23,4 @@ main.exe: main.cs sfuncs.dll
 	mcs -t:library $(addprefix -r:,$(filter %.dll, $^)) $(filter %.cs, $^)
 
 clean:
-	rm [Oo]ut.* *.exe *.pdf *.log *.aux
+	rm [Oo]ut.* *.exe *.pdf *.log *.aux *.eps

@@ -2,8 +2,10 @@ set terminal epslatex monochrome
 set output "exp_gnuplot.tex"
 set size 0.6
 set tics out
-set xlabel "x"
-set ylabel "y"
-set key top left
-plot [][]\
- "out.exp.txt" with lines title 'exp(x)'\
+set xlabel "$x$"
+set ylabel "$y$"
+set key left
+set title "Exponential Function"
+plot [-3:3][0:15]\
+ "out.exp.txt" with lines title '$\mathrm{exp}(x)$'\
+,"tab.exp.txt" with points title '$Tabular Values$'\

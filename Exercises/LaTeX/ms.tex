@@ -2,23 +2,32 @@
 \usepackage{graphicx}
 
 \begin{document}
-\title{Exponential-function}
-\author{Wikipedia}
+\title{The Exponential Function On A Single Page}
+\author{Jens R. Larsen and Wikipedia}
+\date{March 9 2022}
 \maketitle
-\begin{abstract}
-Abstract goes here.
-\end{abstract}
 
 \section{Introduction}
-I can now include figures too!
-\begin{figure}[b]
-	\includegraphics{exp_gnuplot}
-\end{figure}
+The '''exponential function''' is a mathematical function denoted by $f(x)=\exp(x)$ or $e^x$ (where the argument $x$ is written as an exponent). The exponential function originated from the notion of exponentiation (repeated multiplication), and its persistent occurrence in pure and applied mathematics led mathematician Walter Rudin to denote the exponential function as "the most important function in mathematics". The value of the exponential function of 1 is called Euler's number: $\exp(1)\approx2.718$ and is a mathematical constant.
 
-\begin{equation}\label{ExpDef}
-	exp(z) = \int_0^\infty x^{z-1} e^{-x}\,dx, \ \qquad \Re(z) > 0\ .
+\section{The Exponential Function Numerically}
+This short work has computed the exponential function numerically using a "quick-and-dirty" implementation. It involves treating the exponential function as a power series, represented as displayed in equation \ref{ExpDef}.
+\begin{equation} \label{ExpDef}
+	exp(x)  = \sum_{k = 0}^{\infty} \frac{x^k}{k!} = 1 + x + \frac{x^2}{2} + \frac{x^3}{6} + \frac{x^4}{24} +	\cdots
 \end{equation}
-Here is a reference to equation: \ref{ExpDef}. \\
+Within the $C\#$ implementation the leading 10 orders have been included, while any higher orders have been assumed to be negligible. There are two special cases:
+\begin{enumerate}
+	\item If $x<0$ the function treats the negative value by being called recursively as $\left(\exp(-x)\right)^{-1}$
+	\item If $x>1.8$, that is $x$ is larger than a specified precision, the function is called recursively as  
+$\left(\exp(x/2)\right)^{2}$ in order to ensure that the required precision is obtained.
+\end{enumerate}
+\begin{figure}[h] \label{ExpPlot}
+	%\includegraphics{exp_gnuplot}
+	\input{exp_gnuplot.tex}
+\end{figure}
+\section{Confirmation of Implementation}
+With the aim of evaluating the implementation the exponential function has been plotted in figure \ref{ExpPlot} against table values. In order to validate of the exponential function implementation as a power series it has been plotted against tabular values for the interval $[-3<x\leq3]$. The correlation found is acceptable and this work thus concludes that the implementation yields a reasonable treatment of the exponential function.
+
 
 
 \end{document}
