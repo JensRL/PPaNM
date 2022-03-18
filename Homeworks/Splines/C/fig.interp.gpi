@@ -1,0 +1,15 @@
+set terminal pdf
+set out "Fig.interp.pdf"
+set tics in
+set xlabel "x"
+set ylabel "y"
+set key right top
+set grid
+set title "Cubic Interpolation"
+plot \
+ "Out.txt" index 0 using 1:2 with points title 'Tab Values'\
+,"Out.txt" index 1 using 1:2 with linespoints title 'Interpolation'\
+,"Out.txt" index 2 using 1:2 with lines title 'Derivation'\
+,"Out.txt" index 3 using 1:2 with lines title 'Integration'\
+,"Out.txt" index 0 using 1:2 smooth csplines title 'Gnuplot Cspline'\
+

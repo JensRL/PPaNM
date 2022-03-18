@@ -1,0 +1,12 @@
+set terminal png
+set out "Fig.interp.png"
+set tics in
+set xlabel "x"
+set ylabel "y"
+set key right top
+set grid
+set title "Linear Interpolation and Integration"
+plot \
+ "Out.txt" index 0 using 1:2 with points title 'Tab Values'\
+,"Out.txt" index 1 using 1:3 with lines title 'Interpolation'\
+,"Out.txt" index 2 using 1:3 with lines title 'Integration'

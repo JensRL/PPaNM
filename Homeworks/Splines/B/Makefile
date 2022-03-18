@@ -8,7 +8,7 @@ Out.txt: main.exe
 
 main.exe: main.cs matlib.dll
 
-matlib.dll: linterp.cs
+matlib.dll: qspline.cs
 	mcs -target:library -out:./$@ $^
 
 %.exe: %.cs
