@@ -5,61 +5,37 @@ using static System.Math;
 public static class main{
 	public static void Main(){
 		//Create Tabulation Values
-		int n=10;
-		double[] x = new double[n];
+		double[] xs = new double[] {-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5};
+		int n = xs.Length;
 		double[] x2 = new double[n];
 		double[] x3 = new double[n];
 		double[] x4 = new double[n];
-		double[] y = new double[n];
 		double[] y2 = new double[n];
 		double[] y3 = new double[n];
 		double[] y4 = new double[n];
 
 		int i;
-		for (i=0; i<n; i++){ //Make sin function table values
-			x[i]=2*PI*i/(n-1);
-			y[i]=Sin(x[i]);
-			WriteLine($"{x[i]} {y[i]}");
-		}
-		Write("\n\n"); 
-
 		for (i=0; i<n; i++){ //Make y2 function table values
-			x2[i]=i;
+			x2[i]=xs[i];
 			y2[i]=1;
 			WriteLine($"{x2[i]} {y2[i]}");
 		}
 		Write("\n\n"); 
 		
 		for (i=0; i<n; i++){ //Make y3 function table values
-			x3[i]=i;
-			y3[i]=i;
+			x3[i]=xs[i];
+			y3[i]=x3[i];
 			WriteLine($"{x3[i]} {y3[i]}");
 		}
 		Write("\n\n"); 
+		
 		for (i=0; i<n; i++){ //Make y4 function table values
-			x4[i]=i;
-			y4[i]=Pow(i,2);
+			x4[i]=xs[i];
+			y4[i]=Pow(x4[i],2);
 			WriteLine($"{x4[i]} {y4[i]}");
 		}
 
 		//Calculate interpolations for all table values
-		//Quadratic Interpolation of y
-		Write("\n\n");
-		qspline s = new qspline(x,y);
-		for (double z=x[0]; z<=x[x.Length-1]; z+=1.0/32){
-			WriteLine($"{z} {s.eval(z)}");
-		}
-		//Quadratic Interpolation Derivation
-		Write("\n\n");
-		for (double z=x[0]; z<=x[x.Length-1]; z+=1.0/32){
-			WriteLine($"{z} {s.qterpDeriv(z)}");
-		}
-		//Quadratic Interpolation Integration
-		Write("\n\n");
-		for (double z=x[0]; z<=x[x.Length-1]; z+=1.0/32){
-			WriteLine($"{z} {s.qterpInteg(z)}");
-		}
-		
 		//Quadratic Interpolation of y2
 		Write("\n\n");
 		qspline s2 = new qspline(x2,y2);

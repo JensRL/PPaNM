@@ -4,7 +4,7 @@ using static System.Math;
 
 public class qspline{
 	//Declare variables
-	double[] x, y, b, c;
+	double[] x, y, b, c, p, h;
 
 	public static int binsearch(double[] x, double z){ //Implement binary search as method
 		int i=0, n=x.Length, j=n-1;
@@ -24,8 +24,8 @@ public class qspline{
 		c = new double[n-1];
 		//Construct qspline coefficients - S function
 		int i;  
-		double[] p = new double[n-1];
-		double[] h = new double[n-1];
+		p = new double[n-1];
+		h = new double[n-1];
 		for(i=0; i<n; i++){
 			this.x[i]=x[i];
 			this.y[i]=y[i];
@@ -67,16 +67,12 @@ public class qspline{
 		int ix = binsearch(x,z);
 		for(int i=0; i<ix; i++){
 			double dy=y[i+1]-y[i], dx = x[i+1]-x[i];
-			double p = (y[i+1]-y[i])/dx; //Computing slope
+			double p = dy/dx; 
 			double bi = p-c[i]*dx;
-			cumsum += y[i]*dx + bi * Pow(dx,2)/2 + c[i]*Pow(dx,3)/3;
+			cumsum += y[i]*dx + bi*(Pow(x[i+1],2)-Pow(x[i],2))/2 + c[i] * (Pow(x[i+1],3)-Pow(x[i],3))/3;
 		}
-		//Form arrays for final interval addition
-		double dy_ix=y[ix+1]-y[ix], dx_ix = z-x[ix];
-		double p_ix = (y[ix+1]-y[ix])/dx_ix;
-		double bi_ix = p_ix-c[ix]*dx_ix;
-		//Return cumsum + last interval
-		return cumsum + y[ix]*dx_ix + bi_ix * Pow(dx_ix,2)/2 + c[ix]*Pow(dx_ix,3)/3;
+		//Last term
+		double dy_ix = y[ix+1]-y[ix], dx_ix = z-x[ix];
+		return cumsum + y[ix]*dx_ix + b[ix]*(Pow(z,2)-Pow(x[ix],2))/2 + c[ix]*(Pow(z,3)-Pow(x[ix],3))/3;
 	}
-	
 }

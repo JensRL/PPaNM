@@ -3,30 +3,26 @@ set out "Fig.interp.pdf"
 set tics in
 set xlabel "x"
 set ylabel "y"
-set key right top
+set key below
 set grid
-set multiplot layout 2,2
+set multiplot layout 1,3
 plot \
  "Out.txt" index 0 using 1:2 with points title 'Tab Values'\
-,"Out.txt" index 4 using 1:2 with lines title 'Interpolation'\
-,"Out.txt" index 5 using 1:2 with lines title 'Derivation'\
-,"Out.txt" index 6 using 1:2 with lines title 'Integration'\
+,"Out.txt" index 3 using 1:2 with lines title 'Interpolation'\
+,"Out.txt" index 4 using 1:2 with lines title 'Derivation'\
+,"Out.txt" index 5 using 1:2 with lines title 'Integration'\
 
 plot \
  "Out.txt" index 1 using 1:2 with points title 'Tab Values'\
-,"Out.txt" index 7 using 1:2 with lines title 'Interpolation'\
-,"Out.txt" index 8 using 1:2 with lines title 'Derivation'\
-,"Out.txt" index 9 using 1:2 with lines title 'Integration'\
+,"Out.txt" index 6 using 1:2 with lines title 'Interpolation'\
+,"Out.txt" index 7 using 1:2 with lines title 'Derivation'\
+,"Out.txt" index 8 using 1:2 with lines title 'Integration'\
 
 plot \
  "Out.txt" index 2 using 1:2 with points title 'Tab Values'\
-,"Out.txt" index 10 using 1:2 with lines title 'Interpolation'\
-,"Out.txt" index 11 using 1:2 with lines title 'Derivation'\
-,"Out.txt" index 12 using 1:2 with lines title 'Integration'\
+,"Out.txt" index 9 using 1:2 with lines title 'Interpolation'\
+,"Out.txt" index 10 using 1:2 with lines title 'Derivation'\
+,"Out.txt" index 11 using 1:2 with lines title 'Integration'\
 
-plot \
- "Out.txt" index 3 using 1:2 with points title 'Tab Values'\
-,"Out.txt" index 13 using 1:2 with lines title 'Interpolation'\
-,"Out.txt" index 14 using 1:2 with lines title 'Derivation'\
-,"Out.txt" index 15 using 1:2 with lines title 'Integration'\
+
 
