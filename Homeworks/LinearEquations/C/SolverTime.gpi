@@ -1,0 +1,15 @@
+set terminal pdf
+set out "SolverTime.pdf"
+set tics in
+set xlabel "N"
+set ylabel "t[ms]"
+set key top left
+set grid
+set title "Time Dependence for QRGS Solver"
+f(x) = a*x*x*x-b
+fit f(x) "Out.txt" index 0 using 1:2 via a,b
+plot \
+ "Out.txt" index 0 using 1:2 with points title 'Decomposition Time'\
+,f(x) title "Fit to f(n) = a*n^3 + b" \
+
+
