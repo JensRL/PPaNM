@@ -1,0 +1,13 @@
+set terminal pdf
+set out "lsfit_fig.pdf"
+set tics in
+set xlabel "Time [days]"
+set ylabel "Activity"
+set key top right
+set grid
+set title "Decay of Ra-224"
+plot \
+ "Out_Data.txt" index 0 using 1:2:3 with yerrorbars title 'Data Values'\
+,"Out_Fit.txt" index 0 using 1:2 with lines title 'Best LS-fit'\
+
+

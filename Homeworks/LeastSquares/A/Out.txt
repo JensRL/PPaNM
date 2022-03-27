@@ -1,0 +1,7 @@
+------------------- Check Halflife of Ra-224 --------------------
+The fit parameters are 4.95193531431018 and -0.171220087477659
+Yields a fitted lambda value of -c[1] = 0.171220087477659
+Half-Life is given as ln(2)/lambda = 4.04828189712487 days
+This corresponds badly with the modern day value of around 3.6 days (Wiki)
+A plot representing the fit is outputted as lsfit_fig.pdf
+-----------------------------------------------------------------

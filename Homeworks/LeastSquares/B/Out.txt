@@ -1,0 +1,11 @@
+------------------- Check Halflife of Ra-224 --------------------
+The fit parameters are 4.95193531431018 and -0.171220087477659
+The covariance matrix is calculated to be:
+
+   0.00101  -0.000106 
+ -0.000106    1.8e-05 
+Yields a fitted lambda value of -c[1] = 0.171220087477659
+Half-Life is given as ln(2)/lambda = 4.04828189712487 +/- 0.0171926777257639 days
+This corresponds badly with the modern day value of around 3.6 days (Wiki), as it is well outside the calculated uncertainty.
+A plot representing the fit is outputted as lsfit_fig.pdf
+-----------------------------------------------------------------
