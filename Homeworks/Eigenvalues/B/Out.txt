@@ -1,0 +1,18 @@
+-----------------------------------------------------------------
+Investigating the convergence with respect to rmax
+The results for the three lowest eigenvalues (energies) after Jacobi EVD are compared to analytical values of the eigenenergies
+Done with 2<=r_max<=20, dr = 0.1 Bohr Radius
+The resulting plot can be seen as RmaxConv_fig.pdf
+The three lowest eigenvalues converge within roughly 20 rmax
+-----------------------------------------------------------------
+Investigating the convergence with respect to npoints
+Done with 10<=npoints<=200, dr = 0.1 Bohr Radius
+The resulting plot can be seen as NpointsConv_fig.pdf
+The three lowest eigenvalues converge within roughly 180 points
+-----------------------------------------------------------------
+We now wish to evaluate the calculated eigenfunctions
+The parameters should be chosen well above the limits found above to ensure convergence.
+Parameters chosen: rmax = 40, npoints = 300, dr = rmax/(npoints+1)
+The three lowest wavefunctions are plotted against the analytical ones in Eigenfunctions_fig.pdf
+The numerical solution corresponds extremely well with the analytical one!
+--------------------------------------------------------------------------
