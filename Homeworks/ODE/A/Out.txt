@@ -1,0 +1,4 @@
+-----------------------------------------------------------------------
+The Runge-Kutta 45 stepper and driver is tested for a damped oscillator
+The final solutions are theta=-0.38237528623698 and omega=1.43159939677527
+The results are seen in the plot DampedOsc_fig.pdf
