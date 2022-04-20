@@ -1,0 +1,10 @@
+------------------------------------------------
+Checking implemented Clenshaw-Curtis integrator on various functions:
+Integral with ordinary integrator of 1/sqrt(x) = 1.99996150007805 using i=8576 calls
+Integral with Clenshaw-Curtis integrator of 1/sqrt(x) = 1.99999730808565 using j=24 calls
+Integral with ordinary integrator of ln(x)/Sqrt(x) = -3.9999521745773 using k=8660 calls
+Integral with Clenshaw-Curtis integrator of ln(x)/Sqrt(x) = -3.9999234350396 using l=108 calls
+------------------------------------------------
+Comparing with python integration routines
+Integral of 1/sqrt(x) = 1.9999999999999993 with i = 231 calls
+Integral of ln(x)/sqrt(x) = -3.9999999999999827 with l = 315 calls
