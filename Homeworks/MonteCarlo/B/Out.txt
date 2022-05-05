@@ -1,0 +1,18 @@
+Testing my Monte-Carlo integration routine
+----------Integrating x*y dx dy from 0 to 1 in both dimensions--------------
+The result using plain mc is 0.251528841784425 with uncertainty 0.00221364906420486
+The result using Halton mc is 0.249758665619106 with uncertainty 0.000315150283033167
+Expected result: 0.25
+-----------Integrating (x + sin(y) + 1) dx dy, x = 0,2 and y = -pi, pi------
+The result using plain mc is 25.0345052360954 with uncertainty 0.114051015535252
+The result using Halton mc is 25.1280344407594 with uncertainty 0.00874659084871254
+Expected result: 8*pi = 25.13
+-----------Integrating 1/([1-cos(x)*cos(y)*cos(z)]*pi^3) dx dy dz, from 0 to pi in x,y,z ------
+The result using plain mc is 1.38298948219422 with uncertainty 0.0137160508133838
+The result using Halton mc is 1.39064511682198 with uncertainty 0.00206185712861817
+Expected result: 1.3932
+NOTE: Halton MC required far more N points (factor 10 larger than plain) to converge to the correct result for the difficult singular integral
+--------- Investigating the scaling of the error for plain and Halton MC -----------
+The behavior of the error with N points for the mc routines has been investigated
+The first easy integral was called for plain and halton with varying N points
+The results for plain and Halton mc can be seen in the MCErrs_fig.pdf

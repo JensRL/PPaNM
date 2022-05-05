@@ -1,0 +1,20 @@
+set terminal pdf
+set out "rconv_fig.pdf"
+set multiplot layout 2,1
+set tics in
+set xlabel "Rmax Radius [Bohr Radii]"
+set ylabel "Energy [Hartree]"
+set key top right
+set grid
+set title "E_{0} Rmax Convergence"
+plot [0:20] [-1:1] \
+ "rconv.txt" index 0 using 1:2 with points title 'Shooting Method Solution'\
+,"rconv.txt" index 0 using 1:3 with lines dashtype 2 title 'Analytical E_{0}'
+
+set title "E_{0} Rmin Convergence"
+set xlabel "Rmin Radius [Bohr Radii]"
+set ylabel "Energy [Hartree]"
+set key bottom left
+plot [0:0.5] [-1.0:-0.4] \
+ "rconv.txt" index 1 using 1:2 with points title 'Shooting Method Solution'\
+,"rconv.txt" index 1 using 1:3 with lines dashtype 2 title 'Analytical E_{0}'

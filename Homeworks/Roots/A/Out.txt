@@ -1,0 +1,10 @@
+----------------------Testing the implemented Roots Solver --------------
+--------------------- Roots of f = x^3-3x^2+4 --------------------
+The result is found using the implemented Newton Step Root-Finder algorithm
+We call the algorithm with the derivative of the function: f' = 3x^2-6x
+The determined root is: x=2.00030487850388
+Expected result: 2
+--------------------- Roots of Rosenbrocks Valley Function --------------------
+We call the algorithm with the derivative of the function: f' = 2*(200x^3-200xy+x-1), 200*(y-x^2)
+The determined root is: x = 0.999936708406457 and y = 0.999854960379543
+Expected result: 1,1

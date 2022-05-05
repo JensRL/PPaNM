@@ -1,0 +1,10 @@
+Testing my Monte-Carlo integration routine
+----------Integrating x*y dx dy from 0 to 1 in both dimensions--------------
+The result is 0.250645196031973 with uncertainty 0.00219731903522698
+Expected result: 0.25
+-----------Integrating (x + sin(y) + 1) dx dy, x = 0,2 and y = -pi, pi------
+The result is 25.036063832505 with uncertainty 0.115353208938204
+Expected result: 8*pi = 25.13
+-----------Integrating 1/([1-cos(x)*cos(y)*cos(z)]*pi^3) dx dy dz, from 0 to pi in x,y,z ------
+The result is 1.40020831829421 with uncertainty 0.0212213533738992
+Expected result: 1.3932

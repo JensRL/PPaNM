@@ -1,0 +1,12 @@
+set terminal pdf
+set out "HydrogenE0Sol_fig.pdf"
+set tics in
+set xlabel "Radius [Bohr Radii]"
+set ylabel "Energy"
+set key top right
+set grid
+set title "Hydrogen Ground State Solution"
+plot [0:9] [-0.2:0.4] \
+ "E0Solution.txt" index 0 using 1:2 with lines title 'Shooting Method Solution'\
+,"E0Solution.txt" index 0 using 1:3 with lines dashtype 2 title 'Analytical Solution'\
+
