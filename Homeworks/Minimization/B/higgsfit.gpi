@@ -1,0 +1,11 @@
+set terminal pdf
+set out "higgsfit_fig.pdf"
+set tics in
+set xlabel "Energy [GeV]"
+set ylabel "Cross Section [arb. units]"
+set key top right
+set grid
+set title "The Higgs Boson"
+plot [] [] \
+ "inputdata.txt" with errorbars title 'Data'\
+,"higgsfit.txt" index 0 using 1:2 with lines title 'BW Fit'

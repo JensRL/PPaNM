@@ -1,0 +1,14 @@
+------------------- Testing the implemented Quasi-Newton Minimization algorithm --------------
+--------------------------------------------------------------------------------
+Estimating the minimum of the Rosenberg Valley Function:
+Initial guess for minima: (0.5,1.5)
+The found minima was: (0.999990348244057, 0.999980658678063) in 10 steps.
+Function value at minima: f(x,y) = 9.33000580973985E-11
+The expected result was recovered!
+--------------------------------------------------------------------------------
+Estimating the minimum of the Himmelblau's Function:
+Initial guess for minima: (2.5,2.5)
+The found minima was: (3.00000417877503, 1.99999348625575) in 6 steps
+Function value at minima: f(x,y) = 8.22999993969221E-10
+The expected result for one minima at (3,2) with f(x,y) = 0 was recovered!
+The algorithm has been tested for alternative local minima and succeed in replicating them as well

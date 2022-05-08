@@ -1,0 +1,8 @@
+----------------------------- Finding the Higgs Boson --------------------------
+Solving the problem by fitting Breit-Wigner function to data and minimizing on its chi^2
+The initial guesses on mass = 125.3, width = 3.5, amplitude = 6.1
+The results of the minimization routine were:
+Mass = 1248.07258967568, Width = 18134.0900510334, Amplitude = 2875.33164644174, Nsteps = 59
+The fit to find Higgs was unsuccesful :(
+The resulting fit to the data can be seen in figure higgsfit_fig.pdf
+------------------------------------------------------------------------------
