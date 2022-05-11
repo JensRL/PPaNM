@@ -12,9 +12,11 @@ public static class main{
 		return 1/((E-m)*(E-m) + gamma*gamma/4);
 	}
 
+	static int nsteps=0;
 	//Define chi2 function 
 	public static double chi2(vector x){
 		//Parameters for BW function
+		nsteps++;
 		double m = x[0];
 		double gamma = x[1];
 		double A = x[2];
@@ -23,9 +25,13 @@ public static class main{
 			double Energy = Es[i];
 			double Section = CS[i];
 			double Sigma = Unc[i];
-			sum += ((A*BW(Energy, m, gamma) - Section)*(A*BW(Energy, m, gamma) - Section))/(Sigma*Sigma);
+			//sum += Pow(A*BW(Energy, m, gamma) - Section, 2)/Sigma/Sigma;
+			//var tmp=A*BW(Energy, m, gamma) - Section;
+			//sum+=tmp*tmp/(Sigma*Sigma);
+		sum+=(A*BW(Energy, m, gamma) - Section)*(A*BW(Energy, m, gamma) - Section)/(Sigma*Sigma);
+//Error.WriteLine($"{ (A*BW(Energy, m, gamma) - Section)* (A*BW(Energy, m, gamma) - Section)/(Sigma*Sigma) }");
 		}
-		return sum;
+		return sum/Es.Count;
 	}	
 
 	//Find Higgs
@@ -54,21 +60,26 @@ public static class main{
         	if(j%3 == 1){CS.Add(data[j]);}
         	if(j%3 == 2){Unc.Add(data[j]);}
         }
-        //WriteLine($"{Es[0]} {CS[0]} {Unc[0]}"); - The data arrays seem to be correctly loaded
+        for(int j=0; j<Es.Count; j++)
+        	Error.WriteLine($"{Es[j]} {CS[j]} {Unc[j]}");
 
         //Time for minimization
         vector x0 = new double[3] {125.3, 3.5, 6.1}; //Guess on mass [GeV], width and amplitude A 
         WriteLine($"The initial guesses on mass = {x0[0]}, width = {x0[1]}, amplitude = {x0[2]}");
+	nsteps=0;
         var(res,steps) = minimize.QNMini(chi2, x0, acc: 1e-5);
+	//vector res = swarm.run(chi2,x0,step:0.1,seconds:1);
+        WriteLine($"chi2={chi2(res)}");
         double m = Abs(res[0]);
         double gamma  = Abs(res[1]);
         double A = Abs(res[2]);
         WriteLine("The results of the minimization routine were:");
-        WriteLine($"Mass = {m}, Width = {gamma}, Amplitude = {A}, Nsteps = {steps}");
-
+        WriteLine($"Mass = {m}, Width = {gamma}, Amplitude = {A}, Nsteps = {nsteps}");
         if(m<127 && m>123 && A<10 && A>2){WriteLine("HIGGS MIGHT HAVE BEEN FOUND!");}
 		else{WriteLine("The fit to find Higgs was unsuccesful :(");}
 		//The fitting routine seems to be incredibly sensitive to the input guesses, and fails to replicate Higgs :(
+        
+
         //Output fit for plotting
 		WriteLine("The resulting fit to the data can be seen in figure higgsfit_fig.pdf");
 		WriteLine("------------------------------------------------------------------------------");

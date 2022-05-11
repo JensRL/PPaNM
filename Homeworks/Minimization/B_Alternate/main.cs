@@ -23,7 +23,7 @@ public static class main{
 			double Energy = Es[i];
 			double Section = CS[i];
 			double Sigma = Unc[i];
-			sum += ((A*BW(Energy, m, gamma) - Section)*(A*BW(Energy, m, gamma) - Section))/(Sigma*Sigma);
+sum += (A*BW(Energy, m, gamma) - Section)*(A*BW(Energy, m, gamma) - Section)/(Sigma*Sigma);
 		}
 		return sum;
 	}	

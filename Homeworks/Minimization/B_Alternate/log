@@ -1,0 +1,10 @@
+
+Unhandled Exception:
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+  at System.Collections.Generic.List`1[T].get_Item (System.Int32 index) [0x00009] in <36514b14425c4337b446653c547aa9c3>:0 
+  at main.Main () [0x00117] in <1d06e21a076e4a7cb13c113db68693be>:0 
+[ERROR] FATAL UNHANDLED EXCEPTION: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+  at System.Collections.Generic.List`1[T].get_Item (System.Int32 index) [0x00009] in <36514b14425c4337b446653c547aa9c3>:0 
+  at main.Main () [0x00117] in <1d06e21a076e4a7cb13c113db68693be>:0 
