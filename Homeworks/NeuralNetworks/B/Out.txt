@@ -1,0 +1,10 @@
+--------------- Testing the implemented Artificial Neural Network --------------
+The implementation now allows for derivative and integral of interpolant
+Testing is carried out with respects to interpolation of the same function as before
+Activation function = Gaussian Wavelet, testing function f = 3*x+x^2*sin(x)
+Gaussian Wavelet has analytic derivative and integral => good choice for activation function
+The Artificial Neural Network completed the interpolation successfully!
+For smooth interpolation the number of hidden neurons required was = 15
+The result of the interpolation is seen in figure ANNinterp_fig.pdf
+The resulting derivatives and integrals are now also indicated
+-------------------------------------------------------------------------------
