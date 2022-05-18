@@ -1,13 +1,21 @@
+--------------------------------------
+Exercise 1:
 My max int = 2147483647
 System max int = 2147483647
 My min int = 2147483647
 System min int = -2147483648
+--------------------------------------
+Exercise 2:
 Double epsilon = 2.22044604925031E-16
 Double Machine epsilon = 2.22044604925031E-16
 Float epsilon = 1.192093E-07
 Float Machine epsilon = 1.19209289550781E-07
+--------------------------------------
+Exercise 3:
 sumA-1 = 0.000000e+000 should be 1.110223e-010
 sumB-1 = 1.110223e-010 should be 1.110223e-010
+--------------------------------------
+Exercise 4:
 1,2: False
 0,0: True
 0,1e-10: True

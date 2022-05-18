@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.2)  11 MAR 2022 13:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.2)  18 MAY 2022 10:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -108,10 +108,10 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \gptboxwidth=\skip50
 \gptboxtext=\box49
 Package epstopdf Info: Source file: <exp_gnuplot.eps>
-(epstopdf)                    date: 2022-03-11 13:36:46
+(epstopdf)                    date: 2022-05-18 10:38:12
 (epstopdf)                    size: 39984 bytes
 (epstopdf)             Output file: <exp_gnuplot-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-03-11 13:36:47
+(epstopdf)                    date: 2022-05-18 10:38:14
 (epstopdf)                    size: 11392 bytes
 (epstopdf)             Command: <repstopdf --outfile=exp_gnuplot-eps-converted-
 to.pdf exp_gnuplot.eps>
@@ -150,7 +150,7 @@ onts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2021/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmsy7.pfb>
-Output written on ms.pdf (1 page, 114694 bytes).
+Output written on ms.pdf (1 page, 114696 bytes).
 PDF statistics:
  50 PDF objects out of 1000 (max. 8388607)
  35 compressed objects within 1 object stream

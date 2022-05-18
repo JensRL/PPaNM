@@ -7,6 +7,7 @@ using static complex;
 public static class main{
 	static void Main(){
 		complex MinusOne = new complex(-1,0);
+		WriteLine("-----------------------------------");
 		WriteLine($"Sqrt of -1: {cmath.sqrt(MinusOne)}");
 		WriteLine($"Sqrt of i: {cmath.sqrt(cmath.I)}");
 		WriteLine($"exp(i) = {cmath.exp(cmath.I)}");

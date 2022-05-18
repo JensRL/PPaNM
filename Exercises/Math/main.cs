@@ -22,8 +22,8 @@ static int Main() {
     double x, y;
       x = test.pi;
       y = test.e;
-      Write ("x={0} y={1}\n", x, y);
-      Write ($"x={x} y={y}\n");
+      Write ("x={0} y={1}, should output pi and e\n", x, y);
+      Write ($"x={x} y={y}, should output pi and e\n");
 	math.test();
       return 0;
   }

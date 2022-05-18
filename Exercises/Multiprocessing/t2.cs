@@ -17,6 +17,7 @@ public class main{
 
 	}
 	public static void Main(string[] args){
+		WriteLine("------------------------------------------");
 		WriteLine("Using two threads:");
 		int N = (int)1e8;
 		if(args.Length>0) N = (int)double.Parse(args[0]);

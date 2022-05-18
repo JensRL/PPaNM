@@ -10,14 +10,17 @@ public class epsilon{
                 epssum();
                 
                 //Check the approx function for some values a and b
+                WriteLine("Exercise 4:");
                 WriteLine($"1,2: {approx(1,2)}");
                 WriteLine($"0,0: {approx(0,0)}");
                 WriteLine($"0,1e-10: {approx(0,1e-10)}");
+
         }
         public static void maxint(){
                 int i = 1;
                 while(i+1>i) {i++;}
-                
+                WriteLine("--------------------------------------");
+                WriteLine("Exercise 1:");
                 WriteLine($"My max int = {i}");
                 WriteLine($"System max int = {int.MaxValue}");
         }
@@ -25,15 +28,16 @@ public class epsilon{
         public static void minint(){
                 int i = 1;
                 while(i+1>i) {i=i-1;}
-                
                 WriteLine($"My min int = {i}");
                 WriteLine($"System min int = {int.MinValue}");
+                WriteLine("--------------------------------------");
         }
 
         public static void machineeps(){
                 // Check double eps
                 double x=1; 
                 while(1+x!=1){x/=2;} x*=2;
+                WriteLine("Exercise 2:");
                 WriteLine($"Double epsilon = {x}");
                 WriteLine($"Double Machine epsilon = {System.Math.Pow(2,-52)}");
 
@@ -42,6 +46,7 @@ public class epsilon{
                 while((float)(1F+y) != 1F){y/=2F;} y*=2F;
                 WriteLine($"Float epsilon = {y}");
                 WriteLine($"Float Machine epsilon = {System.Math.Pow(2,-23)}");
+                WriteLine("--------------------------------------");
         }
 
         public static void epssum(){
@@ -53,12 +58,14 @@ public class epsilon{
                 //Incorrect way
                 sumA+=1; 
                 for(int i=0;i<n;i++){sumA+=tiny;}
+                WriteLine("Exercise 3:");
                 WriteLine($"sumA-1 = {sumA-1:e} should be {n*tiny:e}");
 
                 //Correct way
                 for(int i=0;i<n;i++){sumB+=tiny;} 
                 sumB+=1; // THE CORRECT CALCULATION DEPENDS ON THE LOCATION OF THE += TO THE SUM!
                 WriteLine($"sumB-1 = {sumB-1:e} should be {n*tiny:e}");
+                WriteLine("--------------------------------------");
         }
 
         static bool approx(double a, double b, double tau=1e-9, double epsilon=1e-9){
