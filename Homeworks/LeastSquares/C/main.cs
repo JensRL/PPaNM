@@ -42,14 +42,15 @@ public static class main{
 				Out_Fit.WriteLine($"{t} {Math.Exp(output)} {Math.Exp(output_p)} {Math.Exp(output_m)}");
 			}
 		}
-
+		WriteLine("----- We now overplot the fit +/- 1 sigma uncertainties ---------");
 		WriteLine("------------------- Check Halflife of Ra-224 --------------------");
 		WriteLine($"The fit parameters are {c[0]} and {c[1]}");
 		WriteLine($"The covariance matrix is calculated to be:");
+		S.print();
 		WriteLine($"Yields a fitted lambda value of -c[1] = {-c[1]}");
 		WriteLine($"Half-Life is given as ln(2)/lambda = {Math.Log(2)/(-c[1])} +/- {Math.Sqrt(S[1,1])*Math.Log(2)/(-c[1])} days");
 		WriteLine($"This corresponds badly with the modern day value of around 3.6 days (Wiki), as it is well outside the calculated uncertainty.");
-		WriteLine("A plot representing the fit and fit +/m uncertainties is outputted as lsfit_fig.pdf");
+		WriteLine("A plot representing the fit and fit +/- uncertainties is outputted as lsfit_fig.pdf");
 		WriteLine("-----------------------------------------------------------------");
 
 	}//Main

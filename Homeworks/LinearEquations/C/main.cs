@@ -22,9 +22,14 @@ public static class main{
 		clock.Stop();
 		var TimeMs = clock.ElapsedMilliseconds;
 		WriteLine($"{n} {TimeMs}");
-
 		}
 
+		Error.WriteLine("-----------------------------------------------------------------------------");
+		Error.WriteLine("Operations count for QR Factorization has been investigated");
+		Error.WriteLine("The 'fit' operation in GNUPLOT has been combined with the Stopwatch Diagnostics tool");
+		Error.WriteLine("Results can be seen in the plot SolverTime.pdf");
+		Error.WriteLine("The fit to the time sure does reproduce a O(n^3) correlation");
+		Error.WriteLine("-----------------------------------------------------------------------------");
 
 		
 

@@ -8,8 +8,8 @@ CompLnGamma.gnuplot.png: CompOutputLnGamma.txt Makefile
  	set key left top \n\
  	set hidden3d \n\
  	set xyplane at -1 \n\
- 	splot [-5:5] [-5:5] [0:30] '$<' index 0 using 2:1:3 title 'abs(Gamma(z))', \n\
-	" | tee log.gpi | gnuplot
+ 	splot [-5:5] [-5:5] [0:30] '$<' index 0 using 2:1:3 with points title 'abs(Gamma(z))', \n\
+	"| tee log.gpi | gnuplot
 
 CompOutputLnGamma.txt: CompLnGamma.exe
 	mono $< > $@

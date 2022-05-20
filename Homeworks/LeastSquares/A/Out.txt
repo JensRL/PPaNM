@@ -1,3 +1,4 @@
+------- Evaluating implemented Least-Squares fit by QR Decomp ----------
 ------------------- Check Halflife of Ra-224 --------------------
 The fit parameters are 4.95193531431018 and -0.171220087477659
 Yields a fitted lambda value of -c[1] = 0.171220087477659

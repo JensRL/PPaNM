@@ -6,4 +6,4 @@ Integral of 4*sqrt(1-x^2) = 3.14168489828595, which is equal to pi
 Integral of ln(x)/Sqrt(x) = -3.9999521745773, which is equal to -4
 ------------------------------------------------
 Implementing the errorfunction using my own quad routine:
-The obtained result can be seen in the pdf figure
+The obtained result can be seen in the fig.erf.pdf figure

@@ -7,6 +7,8 @@ public static class main{
 	public static void Main(){//Solving the hydrogen wavefunction using Jacobi EVD
 		//-----------------------Investigate convergence with rmax----------------------
 		WriteLine("-----------------------------------------------------------------");
+		WriteLine("Using the Jacobi EVD we now solve the Hydrogen atom");
+		WriteLine("-----------------------------------------------------------------");
 		WriteLine("Investigating the convergence with respect to rmax");
 		WriteLine("The results for the three lowest eigenvalues (energies) after Jacobi EVD are compared to analytical values of the eigenenergies");
 		WriteLine("Done with 2<=r_max<=20, dr = 0.1 Bohr Radius");

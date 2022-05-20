@@ -4,7 +4,7 @@ Estimating the minimum of the Rosenberg Valley Function:
 Initial guess for minima: (0.5,1.5)
 The found minima was: (0.999990348244057, 0.999980658678063) in 10 steps.
 Function value at minima: f(x,y) = 9.33000580973985E-11
-The expected result was recovered!
+The expected result of minima at (1,1) was recovered!
 --------------------------------------------------------------------------------
 Estimating the minimum of the Himmelblau's Function:
 Initial guess for minima: (2.5,2.5)

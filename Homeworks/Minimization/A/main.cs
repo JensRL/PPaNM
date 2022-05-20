@@ -14,7 +14,7 @@ public static class main{
 		var (x1res, steps1) = minimize.QNMini(f1, x01, acc: acc1);
 		WriteLine($"The found minima was: ({x1res[0]}, {x1res[1]}) in {steps1} steps.");
 		WriteLine($"Function value at minima: f(x,y) = {f1(x1res)}");
-		WriteLine("The expected result was recovered!");
+		WriteLine("The expected result of minima at (1,1) was recovered!");
 
 		WriteLine("--------------------------------------------------------------------------------");
 		WriteLine("Estimating the minimum of the Himmelblau's Function:");

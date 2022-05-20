@@ -36,7 +36,7 @@ public static class main{
 				Out_Fit.WriteLine($"{t} {Math.Exp(output)}");
 			}
 		}
-
+		WriteLine("---- The Least Squares fit now also outputs covariance matrix! -------");
 		WriteLine("------------------- Check Halflife of Ra-224 --------------------");
 		WriteLine($"The fit parameters are {c[0]} and {c[1]}");
 		WriteLine($"The covariance matrix is calculated to be:");

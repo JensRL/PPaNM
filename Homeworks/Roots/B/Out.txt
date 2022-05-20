@@ -1,17 +1,20 @@
 -----------------------------------------------------------
+We now wish to solve the Hydrogen Atom utilizing the shooting method with the implemented roots algorithm
+-----------------------------------------------------------
 Lowest root E0 for rmin = 1e-8 and rmax = 8 Bohr radii
 The energy E0 is estimated to be: -0.500032121604093 
 Expected result for ground state: -1/2 Hartree
-Inspecting the resulting wavefunction and energy with the analytic results.
+Inspecting the resulting wavefunction with the analytic solution
 The obtained correlation can be viewed in HydrogenE0Sol_fig.pdf
 -----------------------------------------------------------
-We now wish to investigate the convergence with respect to rmax and rmin:
-The convergence of E0 with varying rmin and rmax can be seen figure 'rconvergence_fig.pdf'.
+We now wish to investigate the convergence with respect to rmax and rmin
+The convergence of E0 with varying rmin and rmax can be seen figure 'rconv_fig.pdf'.
+The solution converges for approximately rmax>5 and rmin<0.1 Bohr radii
 -----------------------------------------------------------
 Investigating convergence with respect to ODE acc and eps.
 Utilizing chosen rmin = 1e-8 and rmax = 8 Bohr radii.
 The convergence of E0 with varying acc and eps can be seen in 'acc_eps_conv_fig.pdf'.
 Low acc and eps are required for any sort of convergence to E0. However, the behaviour at very low values of acc and eps is interesting.
-It deviates from the expected result and some connection between acc and eps is found when varying 
+It deviates from the expected result and some connection between acc and eps is found when varying either
 There may be an ideal combination of acc and eps for proper convergence to E0
 -----------------------------------------------------------

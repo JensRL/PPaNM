@@ -5,7 +5,7 @@ using static System.Random;
 
 public static class main{
 	public static void Main(){//Test the Monte Carlo Integrator
-		WriteLine("Testing my Monte-Carlo integration routine");
+		WriteLine("Testing my Monte-Carlo integration with implemented Halton MC routine");
 		WriteLine("----------Integrating x*y dx dy from 0 to 1 in both dimensions--------------");
 		Func<vector,double> f1 = x => x[0]*x[1];
 		vector a1 = new double[2] {0,0}; //Start point for integration
@@ -36,7 +36,7 @@ public static class main{
 		WriteLine($"The result using Halton mc is {result3Hal.Item1} with uncertainty {result3Hal.Item2}");
 		WriteLine("Expected result: 1.3932");
 		WriteLine("NOTE: Halton MC required far more N points (factor 10 larger than plain) to converge to the correct result for the difficult singular integral");
-
+		WriteLine("The Halton MC did however better approximate the correct result!");
 		WriteLine("--------- Investigating the scaling of the error for plain and Halton MC -----------");
 		int[] Ns = {5, 10, 15, 25, 40, 50, 80, 100, 500, 1000, 2000, 5000, 8000, 10000, 15000, 20000, 25000, 30000, 40000, 50000, 60000, 80000, 100000};
 		using(var outfile = new System.IO.StreamWriter("McOut.txt")){
@@ -49,5 +49,6 @@ public static class main{
 		WriteLine("The behavior of the error with N points for the mc routines has been investigated");
 		WriteLine("The first easy integral was called for plain and halton with varying N points");
 		WriteLine("The results for plain and Halton mc can be seen in the MCErrs_fig.pdf");
+		WriteLine("The Halton MC converges at approximately the same rate as plain MC, but to MUCH lower uncertainties");
 	}//Main
 }//main

@@ -35,21 +35,22 @@ public static class main{
 	//Test the implementation
 	public static void Main(){
 		WriteLine("-----------------------------------------------------------");
+		WriteLine("We now wish to solve the Hydrogen Atom utilizing the shooting method with the implemented roots algorithm");
+		WriteLine("-----------------------------------------------------------");
 		WriteLine("Lowest root E0 for rmin = 1e-8 and rmax = 8 Bohr radii");
 		double rmin = 1e-8, rmax = 8;
 		double energy = RootsSolve(rmin, rmax);
 		WriteLine($"The energy E0 is estimated to be: {energy} ");
 		WriteLine("Expected result for ground state: -1/2 Hartree");
-		WriteLine("Inspecting the resulting wavefunction and energy with the analytic results.");
+		WriteLine("Inspecting the resulting wavefunction with the analytic solution");
 		using(var outfile = new System.IO.StreamWriter("E0Solution.txt")){
 			for(double r=0; r<rmax; r+=1.0/64){
 				outfile.WriteLine($"{r} {ODESolve(r,energy,rmin)} {r*Exp(-r)}");
 			}
 		}
 		WriteLine("The obtained correlation can be viewed in HydrogenE0Sol_fig.pdf");
-
 		WriteLine("-----------------------------------------------------------");
-		WriteLine("We now wish to investigate the convergence with respect to rmax and rmin:");
+		WriteLine("We now wish to investigate the convergence with respect to rmax and rmin");
 		using(var outfile = new System.IO.StreamWriter("rconv.txt")){
 			//Put rmax convergence into index 0 of outfile
 			for(double rmaxconv = 0.5; rmaxconv <= 20; rmaxconv += 0.1){
@@ -64,7 +65,8 @@ public static class main{
 				outfile.WriteLine($"{rminconv} {energy3} {-0.5}");
 			}
 		}
-		WriteLine("The convergence of E0 with varying rmin and rmax can be seen figure 'rconvergence_fig.pdf'.");
+		WriteLine("The convergence of E0 with varying rmin and rmax can be seen figure 'rconv_fig.pdf'.");
+		WriteLine("The solution converges for approximately rmax>5 and rmin<0.1 Bohr radii");
 		WriteLine("-----------------------------------------------------------");
 		WriteLine("Investigating convergence with respect to ODE acc and eps.");
 		WriteLine("Utilizing chosen rmin = 1e-8 and rmax = 8 Bohr radii.");
@@ -84,7 +86,7 @@ public static class main{
 		}
 		WriteLine("The convergence of E0 with varying acc and eps can be seen in 'acc_eps_conv_fig.pdf'.");
 		WriteLine("Low acc and eps are required for any sort of convergence to E0. However, the behaviour at very low values of acc and eps is interesting.");
-		WriteLine("It deviates from the expected result and some connection between acc and eps is found when varying ");
+		WriteLine("It deviates from the expected result and some connection between acc and eps is found when varying either");
 		WriteLine("There may be an ideal combination of acc and eps for proper convergence to E0");
 		WriteLine("-----------------------------------------------------------");
 

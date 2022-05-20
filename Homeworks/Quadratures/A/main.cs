@@ -37,7 +37,7 @@ public static class main{
 			for(double x=-3; x<=3; x+=1.0/8){
 				Error.WriteLine($"{x} {erf(x)}");
 			}
-		WriteLine("The obtained result can be seen in the pdf figure");
+		WriteLine("The obtained result can be seen in the fig.erf.pdf figure");
 
 
 

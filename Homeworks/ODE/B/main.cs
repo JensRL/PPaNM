@@ -27,7 +27,9 @@ public static class main{
 		
 		WriteLine("-----------------------------------------------------------------------");
 		WriteLine("The Runge-Kutta 45 stepper and driver is tested for a damped oscillator");
+		WriteLine("The algorithm now stores the solutions in two generic lists for easy utilization");
 		WriteLine($"The final solutions are theta={ys[0]} and omega={ys[1]}");
 		WriteLine("The results are seen in the plot DampedOsc_fig.pdf using the outputted genlists");
+		WriteLine("-----------------------------------------------------------------------");
 	}//Main
 }//main

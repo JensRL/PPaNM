@@ -86,5 +86,11 @@ public static class main{
 		for (double z=x4[0]; z<=x4[x4.Length-1]; z+=1.0/32){
 			WriteLine($"{z} {s4.qterpInteg(z)}");
 		}
+		Error.WriteLine("-----------------------------------------------------------------------------");
+		Error.WriteLine("Quadratic spline, integrator and derivative was implemented");
+		Error.WriteLine("The algorithm was applied to three different datasets");
+		Error.WriteLine("Results can be seen in the plot Fig.interp.pdf");
+		Error.WriteLine("Alternate plotting with interpolated sin data set can be seen in the plot fig.interp.png");
+		Error.WriteLine("-----------------------------------------------------------------------------");
 	}//Main
 }//main

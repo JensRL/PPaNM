@@ -37,7 +37,7 @@ public static class main{
 				Out_Fit.WriteLine($"{t} {Math.Exp(output)}");
 			}
 		}
-
+		WriteLine("------- Evaluating implemented Least-Squares fit by QR Decomp ----------");
 		WriteLine("------------------- Check Halflife of Ra-224 --------------------");
 		WriteLine($"The fit parameters are {c[0]} and {c[1]}");
 		WriteLine($"Yields a fitted lambda value of -c[1] = {-c[1]}");

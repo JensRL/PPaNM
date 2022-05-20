@@ -29,6 +29,9 @@ public static class main{
 		for (z=x[0], i=0; i<N; z=x[0]+(++i)*step){
 			WriteLine($"{z} {Cos(z)} {linspline.linterpInteg(x,y,z)}");
 		}
-
+		Error.WriteLine("-----------------------------------------------------------------------------");
+		Error.WriteLine("Linear spline and integrator was implemented");
+		Error.WriteLine("Results can be seen in the plot Fig.interp.png");
+		Error.WriteLine("-----------------------------------------------------------------------------");
 	}//Main
 }//main

@@ -1,4 +1,6 @@
 -----------------------------------------------------------------
+Using the Jacobi EVD we now solve the Hydrogen atom
+-----------------------------------------------------------------
 Investigating the convergence with respect to rmax
 The results for the three lowest eigenvalues (energies) after Jacobi EVD are compared to analytical values of the eigenenergies
 Done with 2<=r_max<=20, dr = 0.1 Bohr Radius

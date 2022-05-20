@@ -34,5 +34,11 @@ public static class main{
 			WriteLine($"{z} {s.integ(z)}");
 		}
 		
+		Error.WriteLine("-----------------------------------------------------------------------------");
+		Error.WriteLine("Cubic spline, integrator and derivative was implemented");
+		Error.WriteLine("The algorithms were applied to a dataset of sin(x) values");
+		Error.WriteLine("The GNUPLOT cubic spline routine reproduces an identical fit to my algorithm");
+		Error.WriteLine("Results can be seen in the plot Fig.interp.pdf");
+		Error.WriteLine("-----------------------------------------------------------------------------");
 	}//Main
 }//main

@@ -1,3 +1,5 @@
+--------------------------------------------------------------------------------
+Reading input x from different streams and outputting table with x, sin(x) and cos(x)
 Reading from std input stream:
 1 0.841470984807897 0.54030230586814
 2 0.909297426825682 -0.416146836547142

@@ -27,7 +27,7 @@ public static class main{
 		WriteLine($"Integral with Clenshaw-Curtis integrator of ln(x)/Sqrt(x) = {invlnxdivx_vt} using l={l} calls");
 
 		WriteLine("------------------------------------------------");
-		WriteLine("Comparing with python integration routines");
+		WriteLine("Comparing with python integration routines - My Clenshaw-Curtis is faster!!!");
 		
 
 

@@ -16,7 +16,7 @@ public static class main{
 		//Output fit 
 		vector ys = ODE.Driver(F,start,ystart,stop);
 		
-		/*
+		/* This output method did not reproduce the correct step sizes of the algorithm - Output is formed from the algorithm itself now!
 		using(var outfile = new System.IO.StreamWriter("DampedOsc.txt")){
 			for(double i = start; i<= stop; i+=1.0/32){
 				vector ys = ODE.Driver(F,i,ystart,i+1.0/32);
