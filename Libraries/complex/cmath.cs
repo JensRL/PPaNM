@@ -1,8 +1,8 @@
 /* (C) 2020 Dmitri Fedorov; License: GNU GPL v3+; no warranty. */
 using System;
-public static class cmath{ /* complex math */
+public static partial class cmath{ /* complex math */
 
-public static readonly complex I = new complex(0,1);
+//public static readonly complex I = new complex(0,1);
 
 // xtenstions
 public static bool approx

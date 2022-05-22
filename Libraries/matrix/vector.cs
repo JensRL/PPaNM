@@ -6,7 +6,8 @@ using static System.Console;
 public partial class vector{
 
 private double[] data;
-public int size{ get{return data.Length;} }
+//public int size{ get{return data.Length;} }
+public int size => data.Length;
 
 public double this[int i]{
 	get{return data[i];}
@@ -24,9 +25,9 @@ public vector(double a, double b, double c)
 public vector(double a, double b, double c, double d)
 	{ data = new double[]{a,b,c,d}; }
 public vector(string s){
-	char[] delims={',',' '};
+	char[] separators={',',' '};
 	var options = StringSplitOptions.RemoveEmptyEntries;
-        string[] words = s.Split(delims,options);
+        string[] words = s.Split(separators,options);
         int n = words.Length;
         data = new double[n];
         for(int i=0;i<size;i++){
@@ -38,15 +39,20 @@ public vector(string s){
 public static implicit operator vector (double[] a){ return new vector(a); }
 public static implicit operator double[] (vector v){ return v.data; }
 
-public void print(string s="",string format="{0,10:g3} "){
-	this.fprint(Console.Out,s,format);
-	}
-
-public void fprint(TextWriter file,string s="",string format="{0,10:g3} "){
+public void print
+(string s="",string format="{0,10:g3} ",TextWriter file=null){
+	if(file==null)file = System.Console.Out;
 	file.Write(s);
 	for(int i=0;i<size;i++) file.Write(format,this[i]);
 	file.Write("\n");
-}
+	}
+
+public void fprint
+(TextWriter file,string s="",string format="{0,10:g3} "){
+	file.Write(s);
+	for(int i=0;i<size;i++) file.Write(format,this[i]);
+	file.Write("\n");
+	}
 
 public static vector operator+(vector v, vector u){
 	vector r=new vector(v.size);
@@ -76,6 +82,11 @@ public static vector operator/(vector v, double a){
 	for(int i=0;i<v.size;i++)r[i]=v[i]/a;
 	return r; }
 
+public static vector operator/(vector v, vector w){
+	vector r=new vector(v.size);
+	for(int i=0;i<v.size;i++)r[i]=v[i]/w[i];
+	return r; }
+
 public double dot(vector o){
 	double sum=0;
 	for(int i=0;i<size;i++)sum+=this[i]*o[i];
@@ -89,6 +100,24 @@ public vector map(System.Func<double,double>f){
 	vector v=new vector(size);
 	for(int i=0;i<size;i++)v[i]=f(this[i]);
 	return v;
+	}
+
+public double maxabs(){
+	double r=Abs(this[0]);
+	for(int i=1;i<size;i++)if(Abs(this[i])>r)r=Abs(this[i]);
+	return r;
+	}
+
+public double max(){
+	double r=this[0];
+	for(int i=1;i<size;i++)if(this[i]>r)r=this[i];
+	return r;
+	}
+
+public double min(){
+	double r=this[0];
+	for(int i=1;i<size;i++)if(this[i]<r)r=this[i];
+	return r;
 	}
 
 public double norm(){

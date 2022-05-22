@@ -5,8 +5,8 @@ CONFIG=$(SDKDIR)/vstest.console.runtimeconfig.json
 DOTNET=DOTNET_CLI_TELEMETRY_OPTOUT=1; dotnet
 CSC=$(DOTNET) $(CSCPATH) -reference:$(NETSTANDARD)
 RUN=$(DOTNET) exec --runtimeconfig $(CONFIG)
-#CSC = mcs
-#RUN = mono
+CSC = mcs
+RUN = mono
 
 all: out.txt; cat $<
 

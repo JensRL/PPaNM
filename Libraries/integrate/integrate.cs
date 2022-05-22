@@ -1,5 +1,7 @@
 // (C) 2020 Dmitri Fedorov; License: GNU GPL v3+; no warranty.
-using System; using static System.Math; using static System.Double;
+using System;
+using static System.Math;
+using static System.Double;
 public static partial class integrate{
 
 public static double quad
@@ -7,8 +9,7 @@ public static double quad
 {return o8av(f,a,b,acc,eps);}
 
 public static double o8av
-(Func<double,double> f, double a, double b, double acc=1e-6, double eps=1e-6)
-{
+(Func<double,double> f, double a, double b, double acc=1e-6, double eps=1e-6){
 /// Variable substitutions to treat infinite limits
 /// and singularities at end-points.
 if(a>b) return -o8av(f,b,a,acc,eps);
@@ -40,9 +41,10 @@ w5=w4,w6=w3,w7=w2,w8=w1,
 u5=u4,u6=u3,u7=u2,u8=u1;
 double integral= (w1*f1+w2*f2+w3*f3+w4*f4+w5*f5+w6*f6+w7*f7+w8*f8)*h;
 double approx  = (u1*f1+u2*f2+u3*f3+u4*f4+u5*f5+u6*f6+u7*f7+u8*f8)*h;
-double error=Abs(integral-approx)/1.5;
+double error=Abs(integral-approx);
 double tolerance=acc+eps*Abs(integral);
-if(error<tolerance) return integral;
+//double tolerance=Max(acc,eps*Abs(integral));
+if(error<=tolerance) return integral;
 else if(++nrec>limit){
 	Console.Error.Write($"o8a: nrec>{limit} a={a} b={b}\n");
 	return integral;
@@ -53,26 +55,9 @@ else return o8a(f,a,(a+b)/2,acc/sqr2,eps,f1,f2,f3,f4,nrec,limit)+
 
 public static double o8acc
 (Func<double,double> f, double a, double b, double acc=1e-3, double eps=1e-3)
-{
-/// Clenshaw-Curtis variable substitution
+{/// Clenshaw-Curtis variable substitution
         Func<double,double> F = t => f((a+b)/2+(b-a)/2*Cos(t))*Sin(t)*(b-a)/2;
         return o8a(F,0,PI,acc,eps);
 }//o8acc
 
 }//quad
-
-/*
-const double
-w1 = 0.2424792139077853, w2 =-0.1171075837742504, w3 = 0.499546485260771,
-w4 =-0.1566137566137566, w5=0,
-w6 = 0.3876795162509448, w7 =-0.091005291005291, w8 = 0.2350214159737969;
-const double
-u1 = 0.2350214159737969, u2 =-0.091005291005291, u3 = 0.3876795162509448,
-u4=0, u5 = -0.1566137566137566,
-u6 = 0.499546485260771, u7 = -0.1171075837742504, u8 = 0.2424792139077853;
-double approx1= (w1*f1+w2*f2+w3*f3+w4*f4+w5*f5+w6*f6+w7*f7+w8*f8)*h;
-double approx2= (u1*f1+u2*f2+u3*f3+u4*f4+u5*f5+u6*f6+u7*f7+u8*f8)*h;
-double integral=(approx1+approx2)/2;
-double error=Abs(approx1-approx2);
-double tolerance=acc+eps*Abs(integral);
-*/

@@ -133,6 +133,12 @@ public matrix cols(int a, int b){
   return m;
   }
 
+public static matrix id(int n){
+	var m = new matrix(n,n);
+	for(int i=0;i<n;i++)m[i,i]=1;
+	return m;
+	}
+
 public void set_identity(){ this.set_unity(); }
 public void set_unity(){
 	for(int i=0;i<size1;i++){
@@ -147,9 +153,6 @@ public void setid(){
 		this[i,i]=1;
 		for(int j=i+1;j<size2;j++){ this[i,j]=0;this[j,i]=0; }
 	}
-	}
-public static matrix id(int n){
-	matrix m=new matrix(n,n); m.setid(); return m;
 	}
 
 public void set_zero(){

@@ -9,7 +9,7 @@ Out.htm: main.exe test.py Makefile
 main.exe:main.cs math.dll
 	mcs $< -reference:math.dll
 
-math.dll: integrate.cs
+math.dll: integrate.cs adapt3.cs
 	mcs $^ -target:library -out:$@
 
 clean:

@@ -56,6 +56,15 @@ if(approx(q,exact,acc,eps))WriteLine("test passed\n");
 else {ierr++;WriteLine("test failed\n");}
 
 WriteLine($"failed tests: {ierr}");
+
+acc=1e-6; eps=0; exact = 2.0/5*(1-Exp(-PI));
+WriteLine($"adapt3o: testing ∫_0^PI Exp(-x)Sin(x)^2dx={exact},acc={acc},eps={eps}");
+f = delegate(double x){ ncalls++; return Exp(-x)*Sin(x)*Sin(x);};
+ncalls=0; q=quad.adapt3o(f,0,PI,acc,eps);
+WriteLine($"result = {q}, result/exact={q/exact} ncalls={ncalls}");
+if(approx(q,exact,acc,eps))WriteLine("test passed\n");
+else {ierr++;WriteLine("test failed\n");}
+
 return ierr;
 }
 }
