@@ -1,0 +1,7 @@
+------------------------------------------------------------------
+FOR FULL PROJECT DESCRIPTION REFER TO THE README.txt FILE
+The Berrut B1 rational function interpolation algorithm is tested
+Multiple comparisons with the cubic- and quadratic spline algorithms have been made
+The oscillatory behavior due to the Runge phenomenon has generally been reduced by the Berrut approach
+Multiple test cases were considered and can be inspected in the outputted pdf figures
+------------------------------------------------------------------

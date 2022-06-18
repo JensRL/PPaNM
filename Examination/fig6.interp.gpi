@@ -1,0 +1,14 @@
+set terminal pdf
+set out "BerrutCompDampedOsc.pdf"
+set tics in
+set xlabel "x"
+set ylabel "y"
+set key right top
+set grid
+set title "Berrut Comparison for Damped Oscillator Example: f(x)=sin(20x)*exp(-2x)"
+plot [-1:1.2] [] \
+ "BerrutCompData.txt" index 2 using 1:2 with points title 'Dataset'\
+,"BerrutCompData.txt" index 3 using 1:2 with lines title 'Qspline'\
+,"BerrutCompData.txt" index 3 using 1:3 with lines title 'Cspline'\
+,"BerrutCompData.txt" index 3 using 1:4 with lines title 'Berrut B_1'\
+,"BerrutCompData.txt" index 3 using 1:5 with lines title 'Berrut B_2'\
