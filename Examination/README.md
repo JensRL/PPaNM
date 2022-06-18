@@ -17,9 +17,9 @@ $B_1=\frac{\sum_{i=0}\frac{(-1)^i}{x-x_i}y_i}{\sum_{i=0}\frac{(-1)^i}{x-x_i}}$
 2. Polynomial Example
   - The polynomial example considers the function $f(x)=3x+x^2\cdot sin(x)$, which has multiple local minima/maxima in the investigated region. The results can be seen in the figure "BerrutInterpPoly.pdf". The Berrut algorithm once more outperformed the quadratic spline, yet exhibits more oscillatory behavior than the cubic spline implementation. 
 3. Gaussian Example 
-  - The Gaussian example was a simple test to see if the interpolation algorithms could fit the much used Gaussian given by the function $f(x)=1/\sqrt{2\pi}\exp(-x^2/2)$. The results can be seen as "BerrutInterpGaussian.pdf". All algorithms fit the data without any problems, as is to be expected with such a nice dataset of a smooth function. 
+  - The Gaussian example was a simple test to see if the interpolation algorithms could fit the much used Gaussian given by the function $f(x)=1/\sqrt{2\pi}\{exp}(-x^2/2)$. The results can be seen as "BerrutInterpGaussian.pdf". All algorithms fit the data without any problems, as is to be expected with such a nice dataset of a smooth function. 
 4. Damped Oscillator Example
-  - The Damped Oscillator example utilizes the function $f(x)=\sin(20x)-\exp(-2x)$ to test the algorithms on a highly oscillatory and changing dataset. The Berrut algorithm initially fails to reduce the oscillatory behavior, just as the quadratic spline, but much faster recoveres the correct dampened trend. As before, the cubic spline outperforms the Berrut implementation. 
+  - The Damped Oscillator example utilizes the function $f(x)=\sin(20x)-\{exp}(-2x)$ to test the algorithms on a highly oscillatory and changing dataset. The Berrut algorithm initially fails to reduce the oscillatory behavior, just as the quadratic spline, but much faster recoveres the correct dampened trend. As before, the cubic spline outperforms the Berrut implementation. 
 
 ### Project Extension
 $B_2$ was implemented?
