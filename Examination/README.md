@@ -7,7 +7,7 @@ This exam project revolves around the implementation of the Berrut rational-func
 $B_1=\frac{\sum_{i=0}^{n} \frac{(-1)^i}{x-x_i}y_i}{\sum_{i=0}^{n}\frac{(-1)^i}{x-x_i}}$. The $B_1$ expression was found in the "interpolation.pdf" notes (equation 38) or alternatively in the 1988 article *Rational Functions for Guaranteed and Experimentally Well-Conditioned Global Interpolation* by J.P. Berrut. The $B_1$ (and $B_2$) rational function(s) can be shown to have no poles on the real axis and is infinitely differentiable (Berrut 1988). The $B_1$ function is supposed to be less suceptible to the Runge phenomenon, i.e. oscillatory behavior during interpolation between equally spaced datapoints, and this is what will be investigated for several cases in this project. More specifically, the results of the Berrut interpolation will be compared to the Quadratic and Cubic spline algorithms from the course for 4 separate interpolation cases. 
 
 
-$B_1=\frac{\sum_{i=0}^n\frac{(-1)^i}{x-x_i}y_i}{\sum\frac{(-1)^i}{x-x_i}}$
+$B_1=\frac{\sum_{i=0} ^n\frac{(-1)^i}{x-x_i}y_i}{\sum\frac{(-1)^i}{x-x_i}}$
 
 
 
