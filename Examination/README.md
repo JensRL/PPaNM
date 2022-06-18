@@ -4,7 +4,7 @@
 
 ### Project Description and Implementation
 This exam project revolves around the implementation of the Berrut rational-function interpolation algorithm. The idea was first described by J.P. Berrut in 1988, in which two rational-function were proposed as possible interpolants. In this project the $B_1$ rational-function was implemented, given by the expression: 
-$B_1=\frac{\sum_{i=0} ^n\frac{(-1)^i}{x-x_i}y_i}{\sum_{i=0}\frac{(-1)^i}{x-x_i}}$. The $B_1$ expression was found in the "interpolation.pdf" notes (equation 38) or alternatively in the 1988 article *Rational Functions for Guaranteed and Experimentally Well-Conditioned Global Interpolation* by J.P. Berrut. The $B_1$ (and $B_2$) rational function(s) can be shown to have no poles on the real axis and is infinitely differentiable (Berrut 1988). The $B_1$ function is supposed to be less suceptible to the Runge phenomenon, i.e. oscillatory behavior during interpolation between equally spaced datapoints, and this is what will be investigated for several cases in this project. More specifically, the results of the Berrut interpolation will be compared to the Quadratic and Cubic spline algorithms from the course for 4 separate interpolation cases. 
+$B_1=\frac{\sum_{i=0}\frac{(-1)^i}{x-x_i}y_i}{\sum_{i=0}\frac{(-1)^i}{x-x_i}}$ (note: summation limit is $n$). The $B_1$ expression was found in the "interpolation.pdf" notes (equation 38) or alternatively in the 1988 article *Rational Functions for Guaranteed and Experimentally Well-Conditioned Global Interpolation* by J.P. Berrut. The $B_1$ (and $B_2$) rational function(s) can be shown to have no poles on the real axis and is infinitely differentiable (Berrut 1988). The $B_1$ function is supposed to be less suceptible to the Runge phenomenon, i.e. oscillatory behavior during interpolation between equally spaced datapoints, and this is what will be investigated for several cases in this project. More specifically, the results of the Berrut interpolation will be compared to the Quadratic and Cubic spline algorithms from the course for 4 separate interpolation cases. 
 
 ### Project Results
 1. Classic Discontinuous Data Example
@@ -18,7 +18,7 @@ $B_1=\frac{\sum_{i=0} ^n\frac{(-1)^i}{x-x_i}y_i}{\sum_{i=0}\frac{(-1)^i}{x-x_i}}
 
 ### Project Extension
 As an extension to the project the Berrut $B_2$ rational-function interpolant was also implemented. This rational-function interpolant is given as: 
-$B_2 = \frac{\frac{1}{x-x_0}y_0+2\sum_{i=1}^{n-1}\frac{(-1)^i}{x-x_i}y_i+\frac{(-1)^n}{x-x_n}y_n}{\frac{1}{x-x_0}+2\sum_{i=1}^{n-1}\frac{(-1)^i}{x-x_i}+\frac{(-1)^n}{x-x_n}}$.
+$B_2 = \frac{\frac{1}{x-x_0}y_0+2\sum_{i=1}\frac{(-1)^i}{x-x_i}y_i+\frac{(-1)^n}{x-x_n}y_n}{\frac{1}{x-x_0}+2\sum_{i=1}\frac{(-1)^i}{x-x_i}+\frac{(-1)^n}{x-x_n}}$ (note:summation limit is $n-1$).
 The Berrut interpolants were compared for the Classic data and the damped oscillator examples only, and can be inspected in the figures "BerrutCompClassic.pdf" and "BerrutCompDampedOsc.pdf" respectively. The following correlations can be seen: 
 1. Classic Discontinuous Data Example
   - The $B_1$ algorithm outperforms the $B_2$, while the $B_2$ still significantly improves upon the Qspline. Both Berrut rational-functions are still outperformed by the Cspline algorithm. 
