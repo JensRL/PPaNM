@@ -47,4 +47,4 @@ cspline.dll: cspline.cs
 	mcs -t:library -out:./%.dll $(addprefix -r:,$(filter %.dll,$^)) $(filter %.cs,$^)
 
 clean:
-	rm [Oo]ut.* *.exe *.pdf *.log *.aux *.png
+	rm [Oo]ut.* *.exe *.pdf *.log *.aux *.png *.txt *.dll
