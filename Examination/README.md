@@ -1,6 +1,6 @@
 # Examination Project 2 - Berrut Rational-Function Interpolation Algorithm
 ## Author: Jens Reersted Larsen
-## Student Number 201807725 $\rightarrow$ 25%(23)=2
+## Student Number 201807725 --> 25\%(23)=2
 
 ### Project Description and Implementation
 This exam project revolves around the implementation of the Berrut rational-function(s) interpolation algorithm(s). The idea was first described by J.P. Berrut in 1988, in which two rational functions were proposed as possible interpolants. In this project the $B_1$ rational-function was implemented, given by the expression: 
