@@ -15,6 +15,7 @@ $B_1=\frac{\sum_{i=0}\frac{(-1)^i}{x-x_i}y_i}{\sum_{i=0}\frac{(-1)^i}{x-x_i}}$ (
   - The Gaussian example was a simple test to see if the interpolation algorithms could fit the much used Gaussian given by the function $f(x)=1/\sqrt{2\pi}\cdot e^{-x^2/2}$. The results can be seen as "BerrutInterpGaussian.pdf". All algorithms fit the data without any problems, as is to be expected with such a nice dataset of a smooth function. 
 4. Damped Oscillator Example
   - The Damped Oscillator example utilizes the function $f(x)=sin(20x)-e^{-2x}$ to test the algorithms on a highly oscillatory and changing dataset. The Berrut algorithm initially fails to reduce the oscillatory behavior, just as the quadratic spline, but much faster recoveres the correct dampened trend. As before, the cubic spline outperforms the Berrut implementation. 
+In summation, the $B_1$ algorithm improves the interpolation across all test cases when compared to the Qspline. However, the Cspline algorithm yields better results than the Berrut implementation. This may be due to the more free parameters and increased complexity allowed for/of the Cspline interpolation algorithm. 
 
 ### Project Extension
 As an extension to the project the Berrut $B_2$ rational-function interpolant was also implemented. This rational-function interpolant is given as: 
